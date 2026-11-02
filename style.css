@@ -1,0 +1,50 @@
+/* เว็บไซต์ของผลิตภัณฑ์: หน้าแรก + นโยบายความเป็นส่วนตัว + ข้อตกลงการใช้งาน (สีเขียว-ขาวเดียวกับเว็บสมุดเงิน) */
+:root {
+  --bg: #F4F9F6; --paper: #FFFFFF; --ink: #15281D; --muted: #55695D; --line: #D9E7DE;
+  --green: #15803D; --green-deep: #0F5F2D; --soft: #E4F3E9; --on-green: #FFFFFF;
+  --head: 'Anuphan', 'Sarabun', 'Leelawadee UI', sans-serif; --body: 'Sarabun', 'Leelawadee UI', 'Noto Sans Thai', sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --bg: #0F1813; --paper: #16221B; --ink: #E3F0E7; --muted: #A1B7A9; --line: #2A3B31; --green: #22A355; --green-deep: #1B8746; --soft: #193123; --on-green: #06140B; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.75 var(--body); }
+a { color: var(--green); }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; border-radius: 8px; }
+.wrap { max-width: 980px; margin: 0 auto; padding-left: max(18px, env(safe-area-inset-left)); padding-right: max(18px, env(safe-area-inset-right)); }
+h1, h2, h3 { font-family: var(--head); line-height: 1.3; text-wrap: balance; margin: 0; }
+
+.top { border-bottom: 1px solid var(--line); background: var(--paper); }
+.top .wrap { display: flex; align-items: center; gap: 12px; min-height: 64px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; font: 700 19px var(--head); color: var(--ink); text-decoration: none; margin-right: auto; }
+.brand img { width: 36px; height: 36px; border-radius: 10px; }
+.top nav { display: flex; gap: 18px; font-size: 15px; }
+.top nav a { color: var(--muted); text-decoration: none; }
+.top nav a[aria-current] { color: var(--ink); font-weight: 600; }
+
+.hero { padding-block: 56px 40px; display: grid; gap: 18px; }
+.hero h1 { font-size: clamp(30px, 5.4vw, 46px); max-width: 18ch; }
+.hero p { margin: 0; color: var(--muted); max-width: 60ch; font-size: 18px; }
+.cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 6px; }
+.btn { display: inline-flex; align-items: center; min-height: 50px; padding: 0 24px; border-radius: 14px; background: var(--green); color: var(--on-green); font: 600 17px var(--head); text-decoration: none; }
+.btn.ghost { background: var(--soft); color: var(--green); }
+
+section { padding-block: 28px; }
+section > h2 { font-size: 26px; margin-bottom: 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; display: grid; gap: 6px; align-content: start; }
+.card h3 { font-size: 18px; }
+.card p { margin: 0; color: var(--muted); font-size: 16px; }
+.price .amt { font: 700 30px var(--head); font-variant-numeric: tabular-nums; }
+.price s { color: var(--muted); font-size: 17px; font-weight: 500; }
+.price .best { border: 2px solid var(--green); }
+
+.doc { padding-block: 40px 56px; max-width: 760px; }
+.doc h1 { font-size: 32px; margin-bottom: 6px; }
+.doc .meta { color: var(--muted); margin: 0 0 24px; font-size: 15px; }
+.doc h2 { font-size: 21px; margin: 30px 0 8px; }
+.doc p, .doc li { margin: 0 0 10px; }
+.doc ul, .doc ol { padding-left: 1.3em; margin: 0 0 10px; }
+
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 14.5px; }
+footer .wrap { padding-block: 22px 32px; display: flex; gap: 8px 22px; flex-wrap: wrap; }
+footer a { color: var(--muted); }
