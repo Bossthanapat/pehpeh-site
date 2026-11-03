@@ -3,31 +3,359 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>PEHPEH</title>
-<meta name="description" content="PEHPEH · เครื่องมือช่วยงานโรงเรียน">
-<link rel="icon" href="smudngoen/icon.png">
+<title>PEHPEH · เป๊ะเป๊ะ เครื่องมือช่วยงานโรงเรียน</title>
+<meta name="description" content="PEHPEH (เป๊ะเป๊ะ) ทำเครื่องมือช่วยงานการเงินและงานเอกสารของโรงเรียน ลงครั้งเดียว ทะเบียนคุมและรายงานอัปเดตให้เอง ข้อมูลอยู่ใน Google Drive ของโรงเรียน">
+<meta name="theme-color" content="#123F29">
+<meta property="og:title" content="PEHPEH · ทุกยอดเป๊ะ">
+<meta property="og:description" content="เครื่องมือช่วยงานการเงินโรงเรียน ลงครั้งเดียว ทะเบียนคุมและรายงานอัปเดตให้เอง">
+<meta property="og:image" content="https://officialpehpeh.com/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://officialpehpeh.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="th_TH">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://officialpehpeh.com/">
+<link rel="icon" href="assets/img/icon-64.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@600;700&family=Sarabun:wght@400;600&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600&family=Mitr:wght@500;600&family=Mali:wght@600&display=swap">
+<script>try { var t = localStorage.getItem("peh-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+<link rel="stylesheet" href="assets/pehpeh.css">
+<script src="assets/pehpeh.js" defer></script>
+<script src="assets/content.js" defer></script>
 </head>
 <body>
-<header class="top"><div class="wrap"><a class="brand" href="./">PEHPEH</a></div></header>
-<main class="wrap">
-  <div class="hero">
-    <h1>เครื่องมือช่วยงานโรงเรียน</h1>
-    <p>PEHPEH ทำเครื่องมือที่ช่วยให้ครูทำงานเอกสารน้อยลง และมีเวลาให้นักเรียนมากขึ้น</p>
+
+<nav class="nav fixed" aria-label="เมนูหลัก">
+  <a class="logo" href="./"><img src="assets/img/mascot-sm.webp" alt="" width="40" height="40">
+    <span>PEHPEH<small>เป๊ะเป๊ะ</small></span></a>
+  <button class="theme-btn" data-theme-btn></button>
+  <button class="menu-btn" type="button" aria-label="เปิดเมนู" aria-expanded="false"><i data-ic="menu"></i></button>
+  <div class="nav-links">
+    <a href="#services">บริการ</a>
+    <a href="#screens">หน้าจอจริง</a>
+    <a href="#pricing">ราคา</a>
+    <a href="#faq">คำถาม</a>
+    <a href="#news">ข่าว</a>
+    <a href="#contact">ติดต่อ</a>
   </div>
-  <section>
-    <div class="grid">
-      <a class="card" href="smudngoen/" style="text-decoration: none; color: inherit">
+</nav>
+
+<header class="hero has-fixed-nav" id="top">
+
+  <div class="hero-body">
+    <div data-sec="hero">
+      <span class="eyebrow"><b>ใหม่</b> ปฏิทินงานการเงิน เตือนก่อนถึงกำหนด</span>
+      <h1>ทุกยอด<br><span class="pop">เป๊ะ<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c.6 6.4 5.6 11.4 12 12-6.4.6-11.4 5.6-12 12-.6-6.4-5.6-11.4-12-12C6.4 11.4 11.4 6.4 12 0z"/></svg></span></h1>
+      <p class="lead">เครื่องมือช่วยงานการเงินโรงเรียน ลงบัญชีครั้งเดียว ทะเบียนคุม รายงานเงินคงเหลือ และงบกิจกรรมอัปเดตให้เอง ข้อมูลอยู่ใน Google Drive ของโรงเรียนเอง</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#pricing">ทดลองใช้ฟรี 30 วัน</a>
+        <a class="btn btn-ghost" href="s/demo">ลองเล่นเดโม <i data-ic="arrow"></i></a>
+      </div>
+      <div class="facts">
+        <div><strong>ลงครั้งเดียว</strong>ทะเบียนคุมขึ้นให้ครบ</div>
+        <div><strong>บนมือถือ</strong>ใช้ได้ทุกที่</div>
+        <div><strong>ของโรงเรียน</strong>ข้อมูลไม่ออกนอก Drive</div>
+      </div>
+    </div>
+
+    <div class="stage" aria-hidden="true">
+      <span class="sticky s1">ไม่ผิด!</span>
+      <span class="sticky s2">ไม่ลืม!</span>
+      <img class="mascot" src="assets/img/mascot.webp" alt="" width="520" height="520">
+      <div class="float glass f-task"><div class="row"><span class="dot"><i data-ic="bell"></i></span>
+        <div>อีก 4 วันครบกำหนด<strong style="font-size:16px">นำส่งภาษีหัก ณ ที่จ่าย</strong></div></div></div>
+      <div class="float glass f-balance">เงินคงเหลือรวม 17 ทะเบียน<strong>฿163,599.52</strong>
+        <span class="up">รับ +157,515.50</span> · <span class="down">จ่าย −139,745.12</span></div>
+      <div class="float glass f-sync"><div class="row"><span class="dot"><i data-ic="check"></i></span><div>ทะเบียนคุม<br>อัปเดตแล้ว</div></div></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="perks rise" aria-label="จุดเด่น" data-sec="perks">
+    <div class="perk"><span class="ic"><i data-ic="doc"></i></span><div><b>ลงง่าย</b><span>ไม่ซับซ้อน ใครก็ใช้ได้</span></div></div>
+    <div class="perk"><span class="ic"><i data-ic="chart"></i></span><div><b>ครบทุกบัญชี</b><span>รายรับ–รายจ่าย เงินคงเหลือ</span></div></div>
+    <div class="perk"><span class="ic"><i data-ic="lock"></i></span><div><b>ถูกต้อง ปลอดภัย</b><span>ตรวจสอบย้อนหลังได้</span></div></div>
+    <div class="perk"><span class="ic"><i data-ic="users"></i></span><div><b>เหมาะกับทุกโรงเรียน</b><span>เล็ก กลาง ใหญ่ ใช้ได้หมด</span></div></div>
+  </section>
+
+  <section class="sec" id="why">
+    <div class="sec-head rise" data-head="story">
+      <div><span class="kicker">ทำไมต้องเป๊ะ</span><h2>จากความแค้น<br>สู่เครื่องมือที่ครูการเงินต้องมี</h2></div>
+      <p>เราเริ่มจากงานการเงินโรงเรียนจริง ที่ลงยอดซ้ำหลายเล่ม บวกเลขเอง และต้องมานั่งไล่หายอดที่ไม่ตรง เลยทำให้มันจบในที่เดียว</p>
+    </div>
+    <div class="story" data-sec="story">
+      <article class="tale before rise">
+        <div class="pic"><img src="assets/img/stressed.jpg" alt="ครูการเงินกุมหัว เครียดกับกองเอกสาร" loading="lazy" width="400" height="400"></div>
+        <div class="txt">
+          <span class="tag">ก่อน</span>
+          <h3>ลงยอดซ้ำหลายเล่ม ปิดยอดทีไรไม่ตรง</h3>
+          <div class="notes"><span class="sticky">บวกผิด!</span><span class="sticky">ลืมลงยอด!</span><span class="sticky">รายการผิด!</span><span class="sticky">ทำอยู่ครึ่งวัน!</span></div>
+        </div>
+      </article>
+      <article class="tale after rise">
+        <div class="pic"><img src="assets/img/happy.jpg" alt="ครูการเงินยิ้ม ขยิบตา งานเสร็จ" loading="lazy" width="480" height="480"></div>
+        <div class="txt">
+          <span class="tag">หลังใช้เป๊ะเป๊ะ</span>
+          <h3>แต่ตอนนี้… เป๊ะทุกยอดแล้ว</h3>
+          <ul class="checks">
+            <li><i data-ic="check"></i>ลงรับ–จ่ายครั้งเดียว ทะเบียนคุมทุกเล่มขึ้นให้เอง</li>
+            <li><i data-ic="check"></i>รายงานเงินคงเหลือประจำวันพร้อมพิมพ์</li>
+            <li><i data-ic="check"></i>เตือนงานตามรอบ ไม่พลาดกำหนดส่ง</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="services">
+    <div class="sec-head rise" data-head="services">
+      <div><span class="kicker">บริการ</span><h2>เครื่องมือของ PEHPEH</h2></div>
+      <p>ทุกตัวทำงานบน Google Sheet และ Google Drive ของโรงเรียน เราไม่เก็บข้อมูลของโรงเรียนไว้ที่เรา</p>
+    </div>
+    <div class="services" data-sec="services" data-key="services.items">
+      <article class="svc main rise">
+        <img class="peek" src="assets/img/mascot.webp" alt="">
+        <span class="badge">พร้อมใช้</span>
         <h3>สมุดเงินโรงเรียน</h3>
-        <p>ระบบการเงินโรงเรียนบน Google Sheet ลงบัญชีครั้งเดียว ทะเบียนคุม รายงานคงเหลือ และงบกิจกรรมอัปเดตให้เอง</p>
-        <span style="color: var(--green); font-weight: 600">ดูรายละเอียด →</span>
-      </a>
+        <p>ระบบการเงินโรงเรียนบนเว็บ ต่อกับ Google Sheet ของโรงเรียน ลงบัญชีครั้งเดียว ทุกเล่มอัปเดตตาม</p>
+        <ul class="feat">
+          <li><i data-ic="check"></i>ทะเบียนคุมเงินนอกงบ / เงินงบประมาณ</li>
+          <li><i data-ic="check"></i>รายงานเงินคงเหลือประจำวัน</li>
+          <li><i data-ic="check"></i>งบกิจกรรมและยอดคงเหลือรายโครงการ</li>
+          <li><i data-ic="check"></i>ครูยื่นขอเบิก การเงินอนุมัติในเว็บ</li>
+          <li><i data-ic="check"></i>ปฏิทินงานการเงิน + เตือนทาง LINE</li>
+          <li><i data-ic="check"></i>พิมพ์เอกสารเบิกจ่ายได้ทันที</li>
+        </ul>
+        <div class="acts">
+          <a class="btn btn-gold" href="smudngoen/">ดูรายละเอียด</a>
+          <a class="btn btn-ghost" href="s/demo">ลองเดโม</a>
+        </div>
+      </article>
+      <article class="svc soon rise">
+        <span class="ic"><i data-ic="box"></i></span>
+        <span class="badge">กำลังพัฒนา</span>
+        <h3>งานพัสดุ</h3>
+        <p>จัดซื้อจัดจ้าง ทะเบียนคุมพัสดุ และเอกสารพัสดุ ต่อกับสมุดเงินโรงเรียน ซื้อแล้วตั้งเบิกต่อได้ไม่ต้องกรอกซ้ำ</p>
+        <a class="more" href="#news">ติดตามข่าว →</a>
+      </article>
+      <article class="svc rise">
+        <span class="ic"><i data-ic="spark"></i></span>
+        <h3>อยากให้ช่วยงานไหนอีก?</h3>
+        <p>งานไหนในโรงเรียนที่ทำซ้ำทุกเดือนจนเบื่อ เล่าให้เราฟังได้ ไอเดียจากครูคือสิ่งที่เราจะทำต่อ</p>
+        <a class="more" href="https://line.me/R/ti/p/@800htrqq" target="_blank" rel="noopener">บอกเราทาง LINE →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="screens">
+    <div class="sec-head rise" data-head="screens" data-hid="show-h">
+      <div><span class="kicker">หน้าจอจริง</span><h2 id="show-h">หน้าตาของบริการ</h2></div>
+      <p>ภาพจากเว็บเดโม (โรงเรียนสมมติ) · สมุดเงินโรงเรียนใช้งานจริงที่โรงเรียนนำร่องตั้งแต่ ต.ค. 2569 ลองกดเล่นเองได้ที่เดโม</p>
+    </div>
+    <div class="shots rise" aria-roledescription="carousel" aria-labelledby="show-h">
+      <div class="show-pick" id="show-pick" aria-label="เลือกบริการ"></div>
+      <div class="frame">
+        <div class="bar"><i></i><i></i><i></i><span id="show-bar">เว็บของโรงเรียน</span></div>
+        <div class="track" id="track" tabindex="0" aria-live="polite"></div>
+        <button class="nav-arrow prev" type="button" id="prev" aria-label="ภาพก่อนหน้า"><i data-ic="arrow"></i></button>
+        <button class="nav-arrow next" type="button" id="next" aria-label="ภาพถัดไป"><i data-ic="arrow"></i></button>
+      </div>
+      <div class="dots" id="dots"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="start">
+    <div class="sec-head rise" data-head="steps">
+      <div><span class="kicker">เริ่มใช้</span><h2>3 ขั้น ก็ใช้ได้</h2></div>
+      <p>ไม่ต้องลงโปรแกรม ไม่ต้องมีเซิร์ฟเวอร์ ใช้บัญชี Google ของโรงเรียนบัญชีเดียว</p>
+    </div>
+    <div class="steps" data-sec="steps" data-key="steps.items">
+      <div class="step rise"><h3>ทำสำเนาชีตต้นแบบ</h3><p>กดลิงก์แล้วทำสำเนา ไฟล์จะอยู่ใน Google Drive ของโรงเรียนเอง</p></div>
+      <div class="step rise"><h3>กดติดตั้งเว็บ</h3><p>ในชีตกดเมนู "ติดตั้ง / อัปเดตเว็บ" ระบบสร้างลิงก์เว็บให้ในนามบัญชีของโรงเรียน</p></div>
+      <div class="step rise"><h3>ตั้งค่าแล้วเริ่มลงบัญชี</h3><p>ใส่ข้อมูลโรงเรียน ผู้ใช้ ยอดยกมา และบัญชีธนาคาร จากหน้าตั้งค่าในเว็บ</p></div>
     </div>
   </section>
 </main>
-<footer><div class="wrap"><span>© 2569 PEHPEH</span><span>ติดต่อ: <a href="mailto:officialpehpeh@gmail.com">officialpehpeh@gmail.com</a> · LINE <a href="https://line.me/R/ti/p/@800htrqq" target="_blank" rel="noopener">@800htrqq</a></span></div></footer>
+
+<section class="sec" id="pricing" aria-labelledby="pricing-h">
+  <div class="pricing">
+    <div class="wrap">
+      <div class="sec-head rise" data-head="pricing" data-hid="pricing-h">
+        <div><span class="kicker">ราคา · สมุดเงินโรงเรียน</span><h2 id="pricing-h">เริ่มฟรี แล้วค่อยตัดสินใจ</h2></div>
+        <p>ทดลองได้ครบทุกอย่าง 30 วัน ถ้าหมดสิทธิ์ เว็บที่ติดตั้งแล้วยังใช้ต่อได้ ข้อมูลไม่หาย</p>
+      </div>
+      <div class="plans" data-sec="plans" data-key="pricing.plans">
+        <div class="plan glass rise"><span class="nm">ทดลองใช้</span><span class="amt">ฟรี <small>30 วัน</small></span><p>ใช้ได้ครบทุกฟีเจอร์ ไม่ต้องผูกบัตร</p>
+          <a class="btn btn-ghost" href="s/copy">เริ่มทดลองใช้</a></div>
+        <div class="plan glass rise"><span class="nm">รายปี</span><span class="amt">1,090 <small>บาท/ปี</small></span><p>รวมอัปเดตรุ่นใหม่และถามตอบตลอดปี</p>
+          <a class="btn btn-ghost" href="https://line.me/R/ti/p/@800htrqq" target="_blank" rel="noopener">สั่งซื้อทาง LINE</a></div>
+        <div class="plan glass best rise"><span class="nm">ซื้อขาด · ราคาเปิดตัว</span><span class="amt">2,790 <small>บาท</small><s>3,490</s></span><p>จ่ายครั้งเดียว ใช้ได้ตลอด อัปเดตฟรี</p>
+          <a class="btn btn-gold" href="https://line.me/R/ti/p/@800htrqq" target="_blank" rel="noopener">สั่งซื้อทาง LINE</a></div>
+      </div>
+      <div class="quote-row rise">
+        <button class="btn btn-ghost" type="button" id="quote-open"><i data-ic="doc"></i>ขอใบเสนอราคา</button>
+        <p class="fine" data-sec="pnote" data-key="pricing">ใช้ใบเสนอราคาประกอบการจัดซื้อได้ · ยังออกใบกำกับภาษีไม่ได้</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<dialog id="quote">
+  <form method="dialog" id="quote-form">
+    <h2>ขอใบเสนอราคา</h2>
+    <p class="muted" style="font-size:15px">กรอกแล้วกดส่ง ระบบจะเปิด LINE พร้อมข้อความให้ กดส่งในแชตได้เลย เราจะส่งใบเสนอราคากลับทาง LINE</p>
+    <label class="field">ชื่อโรงเรียน<input name="school" required maxlength="120" autocomplete="organization"></label>
+    <div class="two">
+      <label class="field">แพ็กเกจ<select name="plan"><option>ซื้อขาด 2,790 บาท</option><option>รายปี 1,090 บาท</option></select></label>
+      <label class="field">ชื่อผู้ติดต่อ<input name="who" maxlength="80" autocomplete="name"></label>
+    </div>
+    <div class="acts"><button class="btn btn-line btn-sm" value="cancel" formnovalidate>ยกเลิก</button><button class="btn btn-green btn-sm" value="ok">ส่งทาง LINE</button></div>
+  </form>
+</dialog>
+
+<main class="wrap">
+  <section class="sec" id="faq">
+    <div class="faq">
+      <div class="side rise" data-sec="faqside" data-key="faq">
+        <span class="kicker">คำถามที่พบบ่อย</span><h2 style="font-size:clamp(32px,4.6vw,54px)">ถามมา<br>ตอบไป</h2>
+        <p>ไม่เจอคำตอบที่หา ทักไลน์ <a href="https://line.me/R/ti/p/@800htrqq" target="_blank" rel="noopener">@800htrqq</a> ได้เลย</p>
+        <img src="assets/img/mascot.webp" alt="" loading="lazy" width="160" height="160">
+      </div>
+      <div class="qa rise" data-sec="qa" data-key="faq.items">
+        <details open><summary>ข้อมูลการเงินของโรงเรียนเก็บอยู่ที่ไหน ใครเห็นบ้าง</summary>
+          <div class="ans">อยู่ใน <b>Google Sheet ใน Google Drive ของโรงเรียนเอง</b> PEHPEH ไม่เก็บและไม่มีสิทธิ์เปิดดูข้อมูลของโรงเรียน คนที่เห็นได้คือคนที่โรงเรียนเพิ่มเป็นผู้ใช้เท่านั้น</div></details>
+        <details><summary>ต้องมีอะไรบ้างถึงจะใช้ได้</summary>
+          <div class="ans">บัญชี Google (Gmail) ของโรงเรียนหนึ่งบัญชี กับคอมหรือมือถือที่ต่อเน็ตได้ ตอนติดตั้งครั้งแรกต้องเปิดสวิตช์ Apps Script API หนึ่งครั้ง มีคู่มือบอกทีละขั้น</div></details>
+        <details><summary>ทดลองครบ 30 วันแล้ว หรือหมดอายุ ข้อมูลหายไหม</summary>
+          <div class="ans"><b>ไม่หาย</b> เว็บที่ติดตั้งไว้แล้วใช้ต่อได้ตามเดิม เพราะทั้งข้อมูลและตัวระบบอยู่ในบัญชีของโรงเรียน แค่อัปเดตรุ่นใหม่ไม่ได้จนกว่าจะต่ออายุหรือซื้อ</div></details>
+        <details><summary>รายปีกับซื้อขาดต่างกันยังไง</summary>
+          <div class="ans"><b>รายปี 1,090 บาท</b> ได้อัปเดตรุ่นใหม่และถามตอบตลอดปี · <b>ซื้อขาด 2,790 บาท</b> (ราคาเปิดตัว ปกติ 3,490) จ่ายครั้งเดียว ใช้ได้ตลอดและอัปเดตฟรี</div></details>
+        <details><summary>ให้ครูคนอื่นช่วยใช้ได้ไหม</summary>
+          <div class="ans">ได้ เพิ่มผู้ใช้และกำหนดสิทธิ์ได้จากหน้าตั้งค่า เช่น ครูยื่นคำขอเบิก เจ้าหน้าที่การเงินตรวจ และผู้อำนวยการอนุมัติ ทุกคนใช้บัญชี Google ของตัวเอง</div></details>
+        <details><summary>แบบฟอร์มตรงกับที่เขตของเราใช้ไหม</summary>
+          <div class="ans">ทะเบียนคุมและเอกสารเบิกจ่ายทำตามรูปแบบที่โรงเรียนใช้กันทั่วไป ตั้งชื่อทะเบียน กิจกรรม ผู้ลงนาม และบัญชีธนาคารเองได้ ถ้าเขตของคุณใช้แบบที่ต่างออกไป ลองเทียบในเดโมก่อน หรือทักมาคุยได้</div></details>
+        <details><summary>ขอเอกสารประกอบการจัดซื้อได้ไหม</summary>
+          <div class="ans"><b>ใบเสนอราคา</b> ขอได้ กดปุ่ม "ขอใบเสนอราคา" ใต้ตารางราคา แล้วกดส่งข้อความใน LINE เราจะส่งใบเสนอราคากลับให้<br><b>ใบกำกับภาษี</b> ตอนนี้ยังออกให้ไม่ได้<br>ถ้าฝ่ายพัสดุต้องใช้เอกสารอื่น ทักไลน์ถามก่อนสั่งซื้อได้</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="news">
+    <div class="sec-head rise" data-head="news">
+      <div><span class="kicker">ข่าวจาก PEHPEH</span><h2>อัปเดตล่าสุด</h2></div>
+      <p>ฟีเจอร์ใหม่และเรื่องที่ครูการเงินควรรู้ ข่าวชุดเดียวกันนี้ขึ้นในเว็บสมุดเงินของทุกโรงเรียน</p>
+    </div>
+    <div class="news" id="news-list"><p class="empty">กำลังโหลดข่าว…</p></div>
+  </section>
+
+  <section class="final rise" id="contact" data-sec="contact">
+    <img src="assets/img/mascot.webp" alt="" loading="lazy" width="120" height="120">
+    <div><h2>มีคำถาม คุยกับเราได้เลย</h2><p>ทักไลน์ตอบไวสุด หรือส่งอีเมลมาก็ได้</p></div>
+    <div class="acts">
+      <a class="btn btn-green" href="https://line.me/R/ti/p/@800htrqq" target="_blank" rel="noopener"><i data-ic="chat"></i>LINE @800htrqq</a>
+      <a class="btn btn-line" href="mailto:officialpehpeh@gmail.com">officialpehpeh@gmail.com</a>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span>© 2569 PEHPEH · เป๊ะเป๊ะ</span>
+    <nav aria-label="ลิงก์ท้ายเว็บ">
+      <a href="smudngoen/">สมุดเงินโรงเรียน</a>
+      <a href="smudngoen/privacy.html">ความเป็นส่วนตัว</a>
+      <a href="smudngoen/terms.html">ข้อตกลง</a>
+    </nav>
+  </footer>
+</main>
+
+<a class="line-fab" href="https://line.me/R/ti/p/@800htrqq" target="_blank" rel="noopener"><i data-ic="chat"></i>ทักไลน์</a>
+
+<script>
+  addEventListener('DOMContentLoaded', async () => {
+    /* หน้าจอจริง: เลือกบริการ (ปุ่ม · ถ้าเกิน 4 บริการเป็น dropdown) + ภาพเลื่อนเองทุก 5 วิ
+     * ปัดหรือกดลูกศรได้ · หยุดเลื่อนเองตอนชี้/แตะ/โฟกัส ตอนอยู่นอกจอ และเมื่อผู้ใช้ตั้งลดการเคลื่อนไหว */
+    (async () => {
+      const { esc } = PEH;
+      const services = await PEH.api.showcase();
+      const pick = document.getElementById('show-pick'), track = document.getElementById('track'), dots = document.getElementById('dots');
+      const prev = document.getElementById('prev'), next = document.getElementById('next'), wrap = track.closest('.shots');
+      if (!services.length) { wrap.hidden = true; return; }
+      let svc = services[0], idx = 0, count = 0;
+
+      if (services.length > 4) {
+        pick.innerHTML = '<select aria-label="เลือกบริการ">' + services.map((s, i) => '<option value="' + i + '">' + esc(s.name) + (s.status === 'soon' ? ' (เร็วๆ นี้)' : '') + '</option>').join('') + '</select>';
+        pick.firstChild.onchange = e => show(services[+e.target.value]);
+      } else {
+        pick.innerHTML = services.map((s, i) => '<button type="button" data-i="' + i + '" aria-pressed="' + (i === 0) + '">' + esc(s.name) + (s.status === 'soon' ? '<span class="soon">เร็วๆ นี้</span>' : '') + '</button>').join('');
+        pick.onclick = e => { const b = e.target.closest('[data-i]'); if (b) show(services[+b.dataset.i]); };
+      }
+
+      function show(s) {
+        svc = s; idx = 0;
+        pick.querySelectorAll('[data-i]').forEach(b => b.setAttribute('aria-pressed', services[+b.dataset.i] === s));
+        document.getElementById('show-bar').textContent = s.name + ' · เว็บของโรงเรียน';
+        const shots = s.shots || [];
+        count = shots.length;
+        track.innerHTML = count
+          ? shots.map((p, i) => '<figure class="slide" role="group" aria-roledescription="slide" aria-label="' + (i + 1) + ' จาก ' + count + '" style="margin:0">' +
+              '<img src="' + esc(p.src) + '" alt="' + esc(p.alt || p.title) + '" width="1600" height="1000"' + (i ? ' loading="lazy"' : '') + '>' +
+              '<figcaption class="tag"><b>' + esc(p.title) + '</b>' + (p.text ? '<span>' + esc(p.text) + '</span>' : '') + '</figcaption></figure>').join('')
+          : '<div class="slide empty"><div><img src="assets/img/mascot.webp" alt=""><b>' + esc(s.name) + '</b>' + (s.status === 'soon' ? 'เร็วๆ นี้ · กำลังพัฒนา' : 'ยังไม่มีภาพหน้าจอ') + '</div></div>';
+        dots.innerHTML = count > 1 ? Array.from({ length: count }, (_, i) => '<button type="button" data-d="' + i + '" aria-label="ภาพที่ ' + (i + 1) + '"' + (i ? '' : ' aria-current="true"') + '></button>').join('') : '';
+        prev.hidden = next.hidden = count < 2;
+        track.scrollLeft = 0;
+      }
+      function go(i, smooth = true) {
+        if (count < 2) return;
+        idx = (i + count) % count;
+        track.scrollTo({ left: idx * track.clientWidth, behavior: smooth && !reduce ? 'smooth' : 'auto' });
+      }
+      track.addEventListener('scroll', () => {
+        const i = Math.round(track.scrollLeft / Math.max(1, track.clientWidth));
+        if (i !== idx) idx = i;
+        dots.querySelectorAll('[data-d]').forEach(b => +b.dataset.d === idx ? b.setAttribute('aria-current', 'true') : b.removeAttribute('aria-current'));
+      }, { passive: true });
+      prev.onclick = () => { hold(); go(idx - 1); };
+      next.onclick = () => { hold(); go(idx + 1); };
+      dots.onclick = e => { const b = e.target.closest('[data-d]'); if (b) { hold(); go(+b.dataset.d); } };
+      track.addEventListener('keydown', e => { if (e.key === 'ArrowRight') { e.preventDefault(); next.click(); } if (e.key === 'ArrowLeft') { e.preventDefault(); prev.click(); } });
+
+      // เลื่อนเอง
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let hover = false, seen = false, heldUntil = 0;
+      const hold = () => { heldUntil = Date.now() + 10000; };
+      wrap.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') hover = true; });
+      wrap.addEventListener('pointerleave', () => { hover = false; });
+      track.addEventListener('pointerdown', hold);
+      track.addEventListener('touchstart', hold, { passive: true });
+      new IntersectionObserver(es => { seen = es[0].isIntersecting; }, { threshold: .4 }).observe(track);
+      setInterval(() => {
+        if (reduce || hover || !seen || document.hidden || Date.now() < heldUntil || wrap.contains(document.activeElement)) return;
+        go(idx + 1);
+      }, 5000);
+
+      show(svc);
+    })();
+
+    /* ขอใบเสนอราคา: เปิดแชต LINE OA พร้อมข้อความ (ไม่เก็บข้อมูลที่เรา) */
+    const dq = document.getElementById('quote'), fq = document.getElementById('quote-form');
+    document.getElementById('quote-open').onclick = () => dq.showModal();
+    // เปิด LINE ตอนกดส่ง (ยังอยู่ในจังหวะที่ผู้ใช้กด) · ถ้ารอ event close เบราว์เซอร์อาจบล็อกเป็นป๊อปอัป
+    fq.onsubmit = e => {
+      if (!e.submitter || e.submitter.value !== 'ok') return;
+      const text = 'ขอใบเสนอราคา สมุดเงินโรงเรียน\nโรงเรียน: ' + fq.school.value.trim() + '\nแพ็กเกจ: ' + fq.plan.value + (fq.who.value.trim() ? '\nผู้ติดต่อ: ' + fq.who.value.trim() : '');
+      window.open('https://line.me/R/oaMessage/@800htrqq/?' + encodeURIComponent(text), '_blank', 'noopener');
+    };
+
+    const box = document.getElementById('news-list');
+    const items = (await PEH.api.news()).slice(0, 3);
+    box.innerHTML = items.length
+      ? items.map(n => '<article><time datetime="' + PEH.esc(n.date) + '">' + PEH.thaiDate(n.date) + '</time><h3>' + PEH.esc(n.title) + '</h3><p>' + PEH.esc(n.body) + '</p></article>').join('')
+      : '<p class="empty">ยังไม่มีข่าว</p>';
+  });
+</script>
 </body>
 </html>
