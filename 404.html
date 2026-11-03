@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PEHPEH</title>
+<link rel="icon" href="/smudngoen/icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@600;700&family=Sarabun:wght@400;600&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script>
+  // ลิงค์สั้นของแต่ละโรงเรียน: /s/<ชื่อ> → เว็บสมุดเงินของโรงเรียนนั้น (รายการอยู่ใน /s/links.json · ตัวติดตั้งเพิ่มให้เอง)
+  // GitHub Pages ไม่มีหน้า /s/<ชื่อ> จริง จึงมาที่หน้านี้ (404) แล้วพาไปต่อ
+  (function () {
+    var m = location.pathname.match(/^\/s\/([a-z0-9-]+)\/?$/i);
+    if (!m) return;
+    document.documentElement.className = 'go';
+    fetch('/s/links.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (links) {
+      var url = links[m[1].toLowerCase()];
+      if (url) location.replace(url);
+      else document.documentElement.className = 'missing';
+    }).catch(function () { document.documentElement.className = 'missing'; });
+  })();
+</script>
+<style>
+  .go .page, .missing .nf { display: none; }
+  .go .wait { display: block !important; }
+  .missing .gone { display: block !important; }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><a class="brand" href="/">PEHPEH</a></div></header>
+<main class="wrap doc">
+  <div class="wait" style="display: none"><h1>กำลังพาไปที่เว็บสมุดเงิน…</h1><p class="meta">ถ้าหน้าไม่เปลี่ยนใน 5 วินาที กดรีเฟรช</p></div>
+  <div class="gone" style="display: none"><h1>ไม่พบลิงค์นี้</h1><p>ลิงค์อาจพิมพ์ผิด หรือโรงเรียนเปลี่ยนชื่อลิงค์แล้ว ขอลิงค์ใหม่จากเจ้าหน้าที่การเงินของโรงเรียน</p></div>
+  <div class="page nf"><h1>ไม่พบหน้านี้</h1><p><a href="/">กลับหน้าแรก</a></p></div>
+</main>
+</body>
+</html>

@@ -1,0 +1,7 @@
+; DNS ของ officialpehpeh.com → เว็บบน GitHub Pages (นำเข้าใน Cloudflare: DNS › Import DNS Records)
+; ห้ามเปิด proxy (เมฆส้ม) ให้ record พวกนี้ — GitHub ต้องเห็นโดเมนตรง ๆ ถึงจะออก HTTPS ให้ได้
+officialpehpeh.com.	3600	IN	A	185.199.108.153
+officialpehpeh.com.	3600	IN	A	185.199.109.153
+officialpehpeh.com.	3600	IN	A	185.199.110.153
+officialpehpeh.com.	3600	IN	A	185.199.111.153
+www.officialpehpeh.com.	3600	IN	CNAME	bossthanapat.github.io.
