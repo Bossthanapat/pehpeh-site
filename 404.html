@@ -8,17 +8,30 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anuphan:wght@600;700&family=Sarabun:wght@400;600&display=swap">
 <link rel="stylesheet" href="/style.css">
 <script>
-  // ลิงค์สั้นของแต่ละโรงเรียน: /s/<ชื่อ> → เว็บสมุดเงินของโรงเรียนนั้น (รายการอยู่ใน /s/links.json · ตัวติดตั้งเพิ่มให้เอง)
-  // GitHub Pages ไม่มีหน้า /s/<ชื่อ> จริง จึงมาที่หน้านี้ (404) แล้วพาไปต่อ
+  // ลิงค์สั้นของแต่ละโรงเรียน: /s/<ชื่อ> → เว็บสมุดเงินของโรงเรียนนั้น · GitHub Pages ไม่มีหน้า /s/<ชื่อ> จริง จึงมาที่หน้านี้ (404) แล้วพาไปต่อ
+  // ลิงค์โรงเรียน = /s/l/<hash ของชื่อ>.json เข้ารหัสด้วยชื่อ (ตัวติดตั้งเขียนให้ · สูตรเดียวกับ linkSet_ ใน Installer.gs) → ไล่ดูรายชื่อโรงเรียนไม่ได้
+  // ไม่เจอ → /s/links.json (ลิงค์ของผู้ขายเอง: copy demo guide line)
   (function () {
     var m = location.pathname.match(/^\/s\/([a-z0-9-]+)\/?$/i);
     if (!m) return;
+    var slug = m[1].toLowerCase();
     document.documentElement.className = 'go';
-    fetch('/s/links.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (links) {
-      var url = links[m[1].toLowerCase()];
-      if (url) location.replace(url);
-      else document.documentElement.className = 'missing';
-    }).catch(function () { document.documentElement.className = 'missing'; });
+    var sha = function (s) { return crypto.subtle.digest('SHA-256', new TextEncoder().encode(s)).then(function (b) { return new Uint8Array(b); }); };
+    var hex = function (a) { return Array.prototype.map.call(a, function (b) { return ('0' + b.toString(16)).slice(-2); }).join(''); };
+    var open = function (d) {
+      var bytes = Uint8Array.from(atob(d), function (c) { return c.charCodeAt(0); }), blocks = [];
+      for (var i = 0; i * 32 < bytes.length; i++) blocks.push(sha('pehpeh-key:' + slug + ':' + i));
+      return Promise.all(blocks).then(function (ks) {
+        return new TextDecoder().decode(bytes.map(function (b, j) { return b ^ ks[j >> 5][j & 31]; }));
+      });
+    };
+    var go = function (url) { if (url) location.replace(url); else document.documentElement.className = 'missing'; };
+    sha('pehpeh-link:' + slug).then(function (h) { return fetch('/s/l/' + hex(h.slice(0, 12)) + '.json', { cache: 'no-store' }); })
+      .then(function (r) {
+        if (r.ok) return r.json().then(function (j) { return open(j.d); });
+        return fetch('/s/links.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (links) { return links[slug]; });
+      })
+      .then(go).catch(function () { document.documentElement.className = 'missing'; });
   })();
 </script>
 <style>
